@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Perfil</title>
+</head>
+<body>
+  <h1>Perfil de <%= user.name %></h1>
+  <form action="/users/profile" method="POST" enctype="multipart/form-data">
+    <input type="file" name="image">
+    <button type="submit">Atualizar Imagem</button>
+  </form>
+  <img src="<%= user.imageId %>" alt="Imagem do usuário" width="100" height="100">
+</body>
+</html>
