@@ -6,7 +6,8 @@ import multer from 'multer';
 const router = express.Router();
 const upload = multer({ dest: 'uploads/'});
 
-router.get('/list', isAuth, hasPermission('USERS'), listUsers);
+//router.get('/list', isAuth, hasPermission('USERS'), listUsers);
+router.get('/list', listUsers);
 router.post('/create', isAuth, hasPermission('USERS'), createUser);
 router.post('/permissions', isAuth, hasPermission('USERS'), setPermissions);
 router.get('/profile/:userId', isAuth, hasPermission('PROFILE'), viewProfile);
